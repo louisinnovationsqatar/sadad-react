@@ -1,0 +1,61 @@
+{
+  "name": "@louis-innovations/sadad-react",
+  "version": "1.0.0",
+  "description": "Frontend-only React components for SADAD Payment Gateway integration",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json && tsc --project tsconfig.esm.json",
+    "build:types": "tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "sadad",
+    "payment",
+    "gateway",
+    "qatar",
+    "react",
+    "typescript",
+    "checkout"
+  ],
+  "author": "Louis Innovations (www.louis-innovations.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/louis-innovations/sadad-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louis-innovations/sadad-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/louis-innovations/sadad-react/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "dependencies": {
+    "@louis-innovations/sadad-js-sdk": "file:../sadad-js-sdk"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "typescript": "^5.6.0"
+  }
+}
